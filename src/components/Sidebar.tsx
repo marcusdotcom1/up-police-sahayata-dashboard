@@ -86,7 +86,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
   return (
     <div
       className={cn(
-        "h-full bg-sidebar-background border-r border-sidebar-border transition-all duration-300 relative",
+        "max-h-full bg-sidebar-background border-r border-sidebar-border transition-all duration-300 relative bg-[#006EDD]",
         collapsed ? "w-16" : "w-64"
       )}
     >
