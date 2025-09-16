@@ -95,12 +95,12 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
         onClick={onToggle}
         size="icon"
         variant="ghost"
-        className="absolute -right-3 top-6 h-6 w-6 rounded-full bg-background border border-border shadow-md hover:bg-accent z-10"
+        className="absolute -right-3 top-6 h-8 w-8 rounded-full bg-white border border-border shadow-lg hover:bg-gray-50 z-10 text-gray-700 hover:text-gray-900"
       >
         {collapsed ? (
-          <ChevronRight size={14} />
+          <ChevronRight size={16} />
         ) : (
-          <ChevronLeft size={14} />
+          <ChevronLeft size={16} />
         )}
       </Button>
 
@@ -132,11 +132,12 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
             <NavLink
               key={item.url}
               to={item.url}
+              title={collapsed ? `${item.title} / ${item.titleHi}` : undefined}
               className={({ isActive }) =>
                 cn(
                   "nav-item",
                   isActive && "nav-active",
-                  collapsed && "justify-center px-2"
+                  collapsed && "justify-center px-2 w-10 h-10 mx-auto"
                 )
               }
             >
@@ -152,14 +153,18 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
         </nav>
 
         {/* Bottom Actions */}
-        <div className="absolute bottom-4 left-4 right-4 space-y-2">
+        <div className={cn(
+          "absolute bottom-4 space-y-2",
+          collapsed ? "left-1 right-1" : "left-4 right-4"
+        )}>
           <NavLink
             to="/settings"
+            title={collapsed ? "Settings" : undefined}
             className={({ isActive }) =>
               cn(
                 "nav-item",
                 isActive && "nav-active",
-                collapsed && "justify-center px-2"
+                collapsed && "justify-center px-2 w-10 h-10 mx-auto"
               )
             }
           >
@@ -169,9 +174,10 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
 
           <button
             onClick={() => window.location.href = "/"}
+            title={collapsed ? "Logout" : undefined}
             className={cn(
               "nav-item w-full text-left",
-              collapsed && "justify-center px-2"
+              collapsed && "justify-center px-2 w-10 h-10 mx-auto"
             )}
           >
             <LogOut className="w-5 h-5 flex-shrink-0" />
