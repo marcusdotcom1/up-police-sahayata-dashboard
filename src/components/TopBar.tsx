@@ -22,7 +22,13 @@ const TopBar: React.FC<TopBarProps> = ({ title, titleHi }) => {
     <header className="h-16 bg-background border-b border-border px-6 flex items-center justify-between">
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-3">
-          <Shield className="w-6 h-6 text-primary" />
+          <div className="w-8 h-8 bg-primary/10 rounded-lg p-1 flex items-center justify-center">
+            <img 
+              src="/up-logo.webp" 
+              alt="UP Police Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
           <div>
             <h1 className="text-lg font-semibold text-gradient">
               UP Police Safety Portal

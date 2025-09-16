@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CustomButton } from "@/components/ui/custom-button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import upPoliceLogo from "@/assets/up-police-logo.png";
+import upPoliceLogo from "@/assets/up-logo.webp";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);

@@ -162,10 +162,10 @@
 
   /* Navigation Active State */
   .nav-active {
-    @apply bg-sidebar-accent text-sidebar-accent-foreground font-medium;
+    @apply bg-white/20 text-white font-medium shadow-sm;
   }
 
   .nav-item {
-    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-all;
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-white/90 hover:bg-white/15 hover:text-white transition-all cursor-pointer;
   }
 }

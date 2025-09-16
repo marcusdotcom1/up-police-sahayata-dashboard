@@ -107,8 +107,12 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
       <div className="p-4">
         {/* Logo Section */}
         <div className="flex items-center mb-8">
-          <div className="flex items-center justify-center w-8 h-8 bg-sidebar-primary rounded-lg">
-            <Shield className="w-5 h-5 text-sidebar-primary-foreground" />
+          <div className="flex items-center justify-center w-10 h-10 bg-white rounded-lg p-1">
+            <img 
+              src="/up-logo.webp" 
+              alt="UP Police Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
           {!collapsed && (
             <div className="ml-3">
